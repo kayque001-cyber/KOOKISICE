@@ -222,7 +222,6 @@ textarea:focus-visible {
     z-index: 1;
     width: 440px;
     height: 440px;
-    background-image: url("../assets/images/acai-banner.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -586,14 +585,15 @@ textarea:focus-visible {
     transform: rotate(90deg);
 }
 
+
 /* BOTÃO CONTINUAR COMPRANDO */
+
 .botao-continuar-comprando {
     display: block;
     flex-shrink: 0;
-    width: 100%;
-    max-width: 100%;
+    width: calc(100% - 36px);
     min-height: 44px;
-    margin-bottom: 15px;
+    margin: 12px 18px 0;
     padding: 12px 16px;
     border: none;
     border-radius: 10px;
@@ -605,8 +605,14 @@ textarea:focus-visible {
     text-align: center;
     white-space: normal;
     overflow-wrap: break-word;
+    cursor: pointer;
     transition: background .2s ease;
 }
+
+.botao-continuar-comprando:hover {
+    background: var(--azul-escuro);
+}
+
 
 .botao-continuar-comprando:hover {
     background: var(--azul-escuro);
@@ -1083,5 +1089,42 @@ textarea:focus-visible {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+
+/* =====================================
+   HERO - KOOKIS ICE
+===================================== */
+
+.hero-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-logo {
+    display: block;
+    width: min(100%, 520px);
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 20px;
+}
+
+@media (max-width: 600px) {
+    .hero-logo {
+        width: 90%;
+        max-width: 360px;
+        margin-bottom: 16px;
     }
 }
