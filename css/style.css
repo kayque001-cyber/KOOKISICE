@@ -1443,3 +1443,22 @@ button:active {
         flex-direction: column;
     }
 }
+
+
+.botao-continuar-comprando {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #0789e8;
+    border-radius: 10px;
+    background: #fff;
+    color: #0789e8;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.botao-continuar-comprando:hover {
+    background: #f0f8ff;
+}

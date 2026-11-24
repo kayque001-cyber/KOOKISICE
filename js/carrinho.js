@@ -467,5 +467,14 @@ document.addEventListener("keydown", evento => {
 });
 
 
+// VOLTAR AO CARDÁPIO
+function continuarComprando() {
+    fecharCarrinho();
+
+    document.getElementById("cardapio").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
 // INICIAR CARRINHO
 carregarCarrinho();
