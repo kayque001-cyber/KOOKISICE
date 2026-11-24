@@ -1,0 +1,471 @@
+
+/* =========================================
+   KOOKIS ICE - RESPONSIVIDADE
+========================================= */
+
+/* =========================================
+   TABLETS E NOTEBOOKS MENORES
+========================================= */
+
+@media (max-width: 900px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        padding: 10px 4%;
+    }
+
+    .cabecalho-conteudo {
+        gap: 20px;
+    }
+
+    .navegacao {
+        gap: 20px;
+    }
+
+    /* BANNER */
+
+    .hero {
+        padding: 65px 5%;
+        min-height: 430px;
+    }
+
+    .hero-texto h1 {
+        font-size: 40px;
+    }
+
+    .hero-texto p {
+        font-size: 16px;
+    }
+
+    /* CARDÁPIO */
+
+    .secao-cardapio {
+        padding: 65px 0;
+    }
+
+    .lista-produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES
+========================================= */
+
+@media (max-width: 600px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        padding: 10px 5%;
+    }
+
+    .cabecalho-conteudo {
+        min-height: auto;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 8px 15px;
+    }
+
+    .logo {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .logo img {
+        width: 65px;
+        height: 55px;
+    }
+
+    .botao-carrinho {
+        grid-column: 2;
+        grid-row: 1;
+        width: 44px;
+        height: 44px;
+        justify-self: end;
+    }
+
+    .navegacao {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+        justify-content: center;
+        gap: 25px;
+        padding: 8px 0 5px;
+    }
+
+    .navegacao a {
+        font-size: 13px;
+    }
+
+    /* BANNER */
+
+    .hero {
+        min-height: auto;
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .hero-conteudo {
+        justify-content: center;
+    }
+
+    .hero-texto {
+        width: 100%;
+    }
+
+    .hero-destaque {
+        font-size: 13px;
+    }
+
+    .hero-texto h1 {
+        font-size: 34px;
+        letter-spacing: -0.8px;
+    }
+
+    .hero-texto p {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+    }
+
+    .botao-principal {
+        padding: 14px 25px;
+        font-size: 14px;
+    }
+
+    /* TÍTULOS */
+
+    .titulo-secao {
+        margin-bottom: 30px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 28px;
+    }
+
+    .titulo-secao p {
+        font-size: 14px;
+    }
+
+    /* CARDÁPIO */
+
+    .secao-cardapio {
+        padding: 55px 0;
+    }
+
+    .lista-produtos {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .produto-card {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .produto-imagem {
+        height: 190px;
+    }
+
+    .produto-informacoes {
+        padding: 20px;
+    }
+
+    .produto-informacoes h3 {
+        font-size: 19px;
+    }
+
+    .botao-adicionar {
+        padding: 15px;
+    }
+
+    /* SOBRE */
+
+    .secao-sobre {
+        padding: 55px 0;
+    }
+
+    /* RODAPÉ */
+
+    .rodape {
+        padding: 25px 15px;
+    }
+
+    .rodape p {
+        font-size: 12px;
+    }
+
+    /* WHATSAPP */
+
+    .botao-whatsapp-flutuante {
+        width: 54px;
+        height: 54px;
+        right: 16px;
+        bottom: 18px;
+        font-size: 26px;
+    }
+
+    /* AVISO DO CARRINHO */
+
+    .aviso-carrinho {
+        bottom: 15px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================
+   CARRINHO LATERAL - TABLETS E CELULARES
+========================================= */
+
+@media (max-width: 768px) {
+
+    .painel-carrinho {
+        width: 100%;
+        max-width: 440px;
+    }
+
+    .cabecalho-carrinho {
+        padding: 20px;
+    }
+
+    .conteudo-carrinho,
+    .checkout {
+        padding: 18px;
+    }
+
+    .item-carrinho {
+        gap: 10px;
+    }
+
+    .linha-total strong {
+        font-size: 19px;
+    }
+
+}
+
+
+/* =========================================
+   CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .navegacao {
+        gap: 17px;
+    }
+
+    .navegacao a {
+        font-size: 12px;
+    }
+
+    .hero-texto h1 {
+        font-size: 29px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 25px;
+    }
+
+    .cabecalho-carrinho h2 {
+        font-size: 20px;
+    }
+
+    .item-carrinho {
+        gap: 8px;
+    }
+
+    .item-carrinho-info h4 {
+        font-size: 14px;
+    }
+
+    .item-carrinho-final strong {
+        font-size: 13px;
+    }
+
+    .botao-finalizar,
+    .botao-enviar-pedido {
+        padding: 15px;
+    }
+
+}
+
+
+
+/* =========================================
+   REDESIGN - AJUSTES RESPONSIVOS
+========================================= */
+
+@media (max-width: 900px) {
+
+    .hero-conteudo::after {
+        right: 0;
+        opacity: .45;
+        font-size: 150px;
+    }
+
+    .hero-texto {
+        max-width: 500px;
+    }
+
+    .produto-imagem {
+        height: 210px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .cabecalho {
+        min-height: 0;
+    }
+
+    .hero {
+        min-height: 420px;
+        padding: 55px 0;
+    }
+
+    .hero-conteudo {
+        min-height: 300px;
+    }
+
+    .hero-conteudo::after {
+        right: 50%;
+        top: auto;
+        bottom: -100px;
+        transform: translateX(50%);
+        font-size: 125px;
+        opacity: .16;
+    }
+
+    .hero-texto {
+        max-width: 100%;
+    }
+
+    .hero-texto h1 {
+        font-size: 36px;
+    }
+
+    .hero-texto p {
+        font-size: 15px;
+    }
+
+    .titulo-secao {
+        margin-bottom: 35px;
+    }
+
+    .produto-card {
+        border-radius: 17px;
+    }
+
+    .produto-imagem {
+        height: 210px;
+    }
+
+    .produto-imagem span {
+        font-size: 90px;
+    }
+
+    .produto-informacoes {
+        padding: 20px;
+    }
+
+    .painel-carrinho {
+        border-radius: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+
+
+/* BANNER - AJUSTES PARA CELULAR */
+
+@media (max-width: 900px) {
+    .hero-conteudo::before {
+        width: 260px;
+        height: 260px;
+        right: 0;
+        opacity: .55;
+    }
+
+    .hero-conteudo::after {
+        right: 6%;
+        font-size: 155px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-conteudo {
+        overflow: hidden;
+    }
+
+    .hero-conteudo::before {
+        width: 190px;
+        height: 190px;
+        right: 50%;
+        top: auto;
+        bottom: -90px;
+        transform: translateX(50%);
+        opacity: .35;
+    }
+
+    .hero-conteudo::after {
+        right: 50%;
+        top: auto;
+        bottom: -75px;
+        transform: translateX(50%);
+        font-size: 115px;
+        animation: none;
+        opacity: .8;
+    }
+}
+
+
+
+/* IMAGEM DO BANNER - RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .hero-conteudo::before {
+        width: 350px;
+        height: 350px;
+        right: -35px;
+        opacity: 0.32;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-conteudo::before {
+        width: 230px;
+        height: 230px;
+        right: 50%;
+        top: auto;
+        bottom: -75px;
+        transform: translateX(50%);
+        opacity: 0.22;
+    }
+}

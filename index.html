@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kookis Ice | Cardápio Digital</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+
+            <a href="#" class="logo">
+                <img src="assets/logo/logo-kookis.png" alt="Kookis Ice">
+            </a>
+
+            <nav class="navegacao">
+                <a href="#inicio">Início</a>
+                <a href="#cardapio">Cardápio</a>
+                <a href="#sobre">Sobre nós</a>
+            </nav>
+
+            <button
+                class="botao-carrinho"
+                id="botao-abrir-carrinho"
+                type="button"
+                aria-label="Abrir carrinho"
+                aria-controls="painel-carrinho"
+                aria-expanded="false"
+            >
+                🛒
+                <span id="contador-carrinho">0</span>
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- INÍCIO -->
+        <section class="hero" id="inicio">
+            <div class="container hero-conteudo">
+
+                <div class="hero-texto">
+                    <span class="hero-destaque">Uma experiência deliciosa!</span>
+
+                    <h1>
+                        Seu momento doce
+                        começa aqui!
+                    </h1>
+
+                    <p>
+                        Descubra nossas delícias e escolha seu próximo
+                        sabor favorito.
+                    </p>
+
+                    <a href="#cardapio" class="botao-principal">
+                        Ver cardápio
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CARDÁPIO -->
+        <section class="secao-cardapio" id="cardapio">
+            <div class="container">
+
+                <div class="titulo-secao">
+                    <span>Nossas delícias</span>
+                    <h2>Conheça nosso cardápio</h2>
+                    <p>Escolha seus favoritos e adicione ao carrinho.</p>
+                </div>
+
+                <div class="lista-produtos" id="lista-produtos">
+                    <!-- Produtos inseridos pelo JavaScript -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section class="secao-sobre" id="sobre">
+            <div class="container">
+
+                <div class="titulo-secao">
+                    <span>Conheça a Kookis</span>
+                    <h2>Feito para adoçar seu dia!</h2>
+
+                    <p>
+                        Na Kookis Ice, cada momento merece um toque
+                        especial de sabor e felicidade.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container">
+            <p>© 2026 Kookis Ice. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- FUNDO ESCURO DO CARRINHO -->
+    <div
+        class="fundo-carrinho"
+        id="fundo-carrinho"
+        aria-hidden="true"
+    ></div>
+
+    <!-- PAINEL LATERAL DO CARRINHO -->
+    <aside
+        class="painel-carrinho"
+        id="painel-carrinho"
+        aria-label="Carrinho de compras"
+        aria-hidden="true"
+        inert
+    >
+
+        <div class="cabecalho-carrinho">
+            <div>
+                <span>Seu pedido</span>
+                <h2>Meu carrinho</h2>
+            </div>
+
+            <button
+                type="button"
+                class="botao-fechar-carrinho"
+                id="botao-fechar-carrinho"
+                aria-label="Fechar carrinho"
+            >
+                &times;
+            </button>
+        </div>
+
+        <!-- ÁREA DOS PRODUTOS -->
+        <div class="conteudo-carrinho" id="area-carrinho">
+
+            <div id="lista-carrinho">
+                <!-- Itens do carrinho inseridos pelo JavaScript -->
+            </div>
+
+            <div class="resumo-carrinho">
+                <div class="linha-total">
+                    <span>Total do pedido</span>
+                    <strong id="total-carrinho">R$ 0,00</strong>
+                </div>
+
+                <button
+                    type="button"
+                    class="botao-limpar-carrinho"
+                    id="botao-limpar-carrinho"
+                >
+                    Limpar carrinho
+                </button>
+
+                <button
+                    type="button"
+                    class="botao-finalizar"
+                    id="botao-finalizar"
+                >
+                    Finalizar pedido
+                </button>
+            </div>
+
+        </div>
+
+        <!-- CHECKOUT -->
+        <section class="checkout" id="checkout" style="display: none;">
+
+            <button
+                type="button"
+                class="botao-voltar-carrinho"
+                id="botao-voltar-carrinho"
+            >
+                ← Voltar ao carrinho
+            </button>
+
+            <h3>Finalizar pedido</h3>
+
+            <form id="form-checkout">
+
+                <div class="campo-formulario">
+                    <label for="nome-cliente">Seu nome</label>
+                    <input
+                        type="text"
+                        id="nome-cliente"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        required
+                    >
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="tipo-entrega">Como deseja receber?</label>
+
+                    <select
+                        id="tipo-entrega"
+                        name="tipo"
+                        required
+                    >
+                        <option value="">Selecione uma opção</option>
+                        <option value="Retirada">Retirada</option>
+                        <option value="Entrega">Entrega</option>
+                    </select>
+                </div>
+
+                <div
+                    class="campo-formulario"
+                    id="campo-endereco"
+                    style="display: none;"
+                >
+                    <label for="endereco-cliente">Endereço de entrega</label>
+
+                    <textarea
+                        id="endereco-cliente"
+                        name="endereco"
+                        placeholder="Rua, número, bairro e complemento"
+                    ></textarea>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="observacao-cliente">
+                        Observações (opcional)
+                    </label>
+
+                    <textarea
+                        id="observacao-cliente"
+                        name="observacao"
+                        placeholder="Alguma observação sobre seu pedido?"
+                    ></textarea>
+                </div>
+
+                <button
+                    type="submit"
+                    class="botao-enviar-pedido"
+                >
+                    Continuar pelo WhatsApp
+                </button>
+
+            </form>
+
+        </section>
+
+    </aside>
+
+    <!-- AVISO DE PRODUTO ADICIONADO -->
+    <div
+        class="aviso-carrinho"
+        id="aviso-carrinho"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+    <!-- SCRIPTS -->
+    <script src="js/produtos.js"></script>
+    <script src="js/carrinho.js"></script>
+    <script src="js/whatsapp.js"></script>
+    <script src="js/checkout.js"></script>
+
+</body>
+</html>
